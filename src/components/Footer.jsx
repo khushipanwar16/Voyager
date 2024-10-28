@@ -38,7 +38,7 @@ export default function Footer() {
                 <li key={url}>
                   <Link
                     to={url}
-                    className="footer__content-link text-[15px] text-white hover:text-blue-600 hover:underline"
+                    className="footer__content-link text-[15px] text-white hover:text-pink-300 hover:underline"
                   >
                     {title}
                   </Link>
@@ -62,7 +62,7 @@ export default function Footer() {
                 <li key={url}>
                   <Link
                     to={url}
-                    className="footer__content-link text-[15px] text-white hover:text-blue-600 hover:underline"
+                    className="footer__content-link text-[15px] text-white hover:text-pink-300 hover:underline"
                   >
                     {title}
                   </Link>
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-blue-600"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
                 >
                   <RiInstagramFill />
                 </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-blue-600"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
                 >
                   <RiYoutubeFill />
                 </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-blue-600"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
                 >
                   <RiTwitterFill />
                 </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-blue-600"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
                 >
                   <RiFacebookFill />
                 </Link>

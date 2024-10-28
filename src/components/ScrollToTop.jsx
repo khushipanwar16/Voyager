@@ -24,7 +24,7 @@ export default function ScrollToTop() {
 
   return (
     <div
-      className={`fixed right-6 inline-flex cursor-pointer bg-blue-600 p-3 text-[1.3rem] text-white transition-all duration-400 hover:bg-blue-700 2xl:right-10 ${
+      className={`fixed right-6 inline-flex cursor-pointer bg-[#FFB6C1] p-3 text-[1.3rem] text-white transition-all duration-400  2xl:right-10 ${
         visible ? "bottom-12" : "-bottom-full"
       }`}
       onClick={scrollToTop}

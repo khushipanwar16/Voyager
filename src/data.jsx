@@ -4,9 +4,9 @@ import DestinationImg2 from "./assets/images/dest2.png";
 import DestinationImg3 from "./assets/images/dest3.png";
 
 // import icons
-import ServiceIcon1 from "./assets/images/service-icon-1.png";
-import ServiceIcon2 from "./assets/images/service-icon-2.png";
-import ServiceIcon3 from "./assets/images/service-icon-3.png";
+import ServiceIcon1 from "./assets/images/serviceicon1.png";
+import ServiceIcon2 from "./assets/images/serviceicon2.png";
+import ServiceIcon3 from "./assets/images/serviceicon3.png";
 
 export const serviceData = [
   {

@@ -1,19 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-// import images
-import HeroImg from "../../assets/images/hero-img.png";
+
 
 export default function Hero() {
   return (
     <section className="hero pb-16 transition-all duration-400 dark:bg-gray-900">
       <div className="hero__wrapper relative flex h-[90vh] items-center bg-pink-200">
-        {/* hero img */}
-        <img
-          src={HeroImg}
-          alt="hero img"
-          className="hero__img absolute top-0 left-0 h-full w-full object-cover object-[60%]"
-        />
+      
+       <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        src="src/assets/images/herovideo.mp4" // Replace with the path to your video file
+        autoPlay
+        loop
+        muted
+      />
 
         {/* hero overlay */}
         <div className="absolute top-0 left-0 h-full w-full bg-gray-900/30" />
@@ -22,7 +23,7 @@ export default function Hero() {
           {/* hero data */}
           <div className="hero__data xs:mx-auto xs:max-w-sm sm:max-w-md md:max-w-lg xl:max-w-4xl 2xl:max-w-5xl">
             <h1 className="hero__title section-title text-white xs:text-[42px] sm:text-[48px] 2xl:text-[64px]">
-            Voyager ~<br />
+           
             Transforming Travel<br /> Dreams into Reality.  <br />
             
             </h1>
@@ -31,7 +32,7 @@ export default function Hero() {
              recommendations, and book everything in one place with real-time updates. Whether you're seeking adventure or relaxation,Voyager is
               your ultimate travel companion, making every journey seamless and enjoyable.
             </p>
-            <Link to="/" className="hero__button button inline-flex">
+            <Link to="/" className="hero__button button inline-flex text-black border-2 border-black ">
               Get Started
             </Link>
           </div>

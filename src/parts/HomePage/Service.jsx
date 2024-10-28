@@ -12,7 +12,7 @@ export default function Service() {
             return (
               <div
                 key={index}
-                className="services__card grid gap-6 rounded-lg border-2 border-gray-200 bg-white py-8 px-6 transition-all duration-400 hover:border-blue-600 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-600"
+                className="services__card grid gap-6 rounded-lg border-2 border-gray-200 bg-white py-8 px-6 transition-all duration-400 hover:border-pink-300 hover:shadow-xl dark:border-gray-800 dark:bg-gray-900 dark:hover:border-pink-300"
               >
                 <img src={item.icons} alt="icon service" className="w-16" />
 

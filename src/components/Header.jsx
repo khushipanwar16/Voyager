@@ -1,7 +1,9 @@
+// src/components/Header.jsx
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-// react icons
+// React icons
 import {
   RiMenu3Fill,
   RiCloseFill,
@@ -9,15 +11,15 @@ import {
   RiSunFill,
 } from "react-icons/ri";
 
-// import color mode custom hooks
+// Import color mode custom hooks
 import useColorMode from "../hooks/useColorMode";
+import RegisterModal from "../components/RegisterModal"; // Import the RegisterModal component
 
 export default function Header() {
-  // open menu state
+  // Menu, sticky header, and modal state
   const [menuOpen, setMenuOpen] = useState(false);
-
-  // sticky header state
   const [stickyHeader, setStickyHeader] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -29,19 +31,17 @@ export default function Header() {
     });
   }, [stickyHeader]);
 
-  // color mode state
+  // Color mode state
   const [colorMode, setColorMode] = useColorMode();
 
   return (
     <header
       className={`header fixed top-0 left-0 z-50 w-full transition-all duration-400 ${
-        stickyHeader
-          ? "bg-white shadow-md dark:bg-gray-900"
-          : "bg-transparent shadow-none"
+        stickyHeader ? "bg-white shadow-md dark:bg-gray-900" : "bg-transparent shadow-none"
       }`}
     >
       <div className="header__container container flex h-24 items-center justify-between">
-        {/* header logo */}
+        {/* Header logo */}
         <Link
           to="/"
           className={`header__logo font-serif text-[20px] font-semibold dark:text-white ${
@@ -51,19 +51,20 @@ export default function Header() {
           Voyager.
         </Link>
 
-        {/* header menu */}
+        {/* Header menu */}
         <div
           className={`header__menu fixed top-0 z-10 flex h-full w-[70%] flex-col justify-between bg-white px-10 pt-24 pb-10 shadow-[0_-4px_12px_rgba(0,0,0,0.12)] transition-all duration-400 dark:bg-gray-900 md:static md:z-auto md:h-auto md:w-auto md:flex-row md:items-center md:gap-8 md:bg-transparent md:p-0 md:shadow-none md:dark:bg-transparent ${
             menuOpen ? "right-0" : "-right-full"
           }`}
         >
+          {/* Navigation items */}
           <ul className="header__list mb-8 flex flex-col gap-8 md:mb-0 md:flex-row">
             {[
               ["About", "/about"],
-              ["Why Us", "/why-us"],
-              ["Trips", "/trips"],
-              ["Pricing", "/pricing"],
-              ["Contact", "/contact"],
+              ["Why Us", "/Review"],
+              ["Trips", "/Destinations"],
+              ["Pricing", "/PricingPage"],
+              ["Contact", "/Callback"],
             ].map(([title, url]) => (
               <li key={url}>
                 <Link
@@ -74,8 +75,8 @@ export default function Header() {
                 >
                   {title}
                   <div
-                    className={`absolute top-6 left-0 h-[3px] w-0 bg-blue-600 transition-all duration-400 group-hover:w-full ${
-                      stickyHeader ? "md:bg-blue-600" : "md:bg-white"
+                    className={`absolute top-6 left-0 h-[3px] w-0 bg-pink-300 transition-all duration-400 group-hover:w-full ${
+                      stickyHeader ? "md:bg-pink-300" : "md:bg-white"
                     }`}
                   />
                 </Link>
@@ -83,37 +84,37 @@ export default function Header() {
             ))}
           </ul>
 
-          {/* header theme toggle [desktop version] */}
+          {/* Header theme toggle (desktop version) */}
           <div
             className={`header__theme hidden cursor-pointer p-1 text-[1.3rem] dark:text-white md:flex ${
               stickyHeader ? "text-gray-900" : "text-white"
             }`}
-            onClick={() =>
-              setColorMode(colorMode === "light" ? "dark" : "light")
-            }
+            onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           >
             {colorMode === "light" ? <RiMoonFill /> : <RiSunFill />}
           </div>
 
-          <Link to="/register" className="header__button button">
+          {/* Register button */}
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="header__button button text-black border-2 border-black"
+          >
             Register
-          </Link>
+          </button>
         </div>
 
         <div className="header__wrapper inline-flex items-center gap-5 md:hidden">
-          {/* header theme toggle [mobile version] */}
+          {/* Header theme toggle (mobile version) */}
           <div
             className={`header__theme cursor-pointer p-1 text-[1.3rem] dark:text-white ${
               stickyHeader ? "text-gray-900" : "text-white"
             }`}
-            onClick={() =>
-              setColorMode(colorMode === "light" ? "dark" : "light")
-            }
+            onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
           >
             {colorMode === "light" ? <RiMoonFill /> : <RiSunFill />}
           </div>
 
-          {/* header menu toggle */}
+          {/* Header menu toggle */}
           <div
             className="header__toggle z-10 inline-flex cursor-pointer p-1 text-[1.3rem]"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -130,6 +131,9 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* Register Modal */}
+      <RegisterModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </header>
   );
 }

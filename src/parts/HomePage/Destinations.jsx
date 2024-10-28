@@ -11,7 +11,7 @@ export default function Destinations() {
     <section className="destinations section transition-all duration-400 dark:bg-gray-900">
       <div className="destinations__container container grid gap-12">
         <div className="destinations__data text-center">
-          <p className="destinations__subtitle section-subtitle">
+          <p className="destinations__subtitle section-subtitle text-[#FFB6C1]">
             Destinations
           </p>
           <h1 className="destinations__title section-title">

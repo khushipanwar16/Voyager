@@ -45,10 +45,10 @@ export default function Header() {
         <Link
           to="/"
           className={`header__logo font-serif text-[20px] font-semibold dark:text-white ${
-            stickyHeader ? "text-gray-900" : "text-white"
+            stickyHeader ? "text-gray-900" : "text-[#FFB6C1]"
           }`}
         >
-          Voyager.
+          Voyager
         </Link>
 
         {/* Header menu */}

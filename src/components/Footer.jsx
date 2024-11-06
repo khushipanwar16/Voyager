@@ -17,22 +17,22 @@ export default function Footer() {
           <div className="footer__content">
             <Link
               to="/"
-              className="footer__content-logo font-serif text-[20px] font-semibold text-white"
+              className="footer__content-logo font-serif text-[20px] font-semibold text-[#FFB6C1]"
             >
-              Voyager.
+              Voyager
             </Link>
           </div>
 
           <div className="footer__content">
-            <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-white">
+            <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-[#FFB6C1]">
               Learn More
             </h3>
 
             <ul className="footer__content-list flex flex-col gap-2">
               {[
-                ["About", "/about"],
-                ["Press release", "/press-release"],
-                ["Environment", "/environment"],
+                ["Customer Support", "/Customer-Support"],
+                ["User Agreement", "/User-Agreement"],
+                ["Terms of Service", "/Terms-of-Service"],
                 ["Privacy policy", "/privacy-policy"],
               ].map(([title, url]) => (
                 <li key={url}>
@@ -48,16 +48,16 @@ export default function Footer() {
           </div>
 
           <div className="footer__content">
-            <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-white">
+            <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-[#FFB6C1]">
               Ticket & Booking
             </h3>
 
             <ul className="footer__content-list flex flex-col gap-2">
               {[
-                ["Lift tickets", "/lift-tickets"],
-                ["Season passes", "/season-passes"],
-                ["Vacations package", "/vacations-package"],
-                ["Best trips", "/best-trips"],
+                 ["FAQs on Booking", "/FAQs-on-Booking"],
+                 ["Flight Status", "/Flight-Status"],
+                 ["Car Rentals", "/Car-Rentals"],
+                 ["Special Offers", "/Special-Offers"],
               ].map(([title, url]) => (
                 <li key={url}>
                   <Link
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
 
           <div className="footer__content">
-            <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-white">
+            <h3 className="footer__content-title pb-4 font-serif text-[18px] font-semibold text-[#FFB6C1]">
               Socials
             </h3>
 
@@ -80,7 +80,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-[#FFB6C1]"
                 >
                   <RiInstagramFill />
                 </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-[#FFB6C1]"
                 >
                   <RiYoutubeFill />
                 </Link>
@@ -96,7 +96,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-[#FFB6C1]"
                 >
                   <RiTwitterFill />
                 </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
               <li>
                 <Link
                   to="/"
-                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-pink-300"
+                  className="footer__content-icon inline-flex text-[1.3rem] text-white hover:text-[#FFB6C1]"
                 >
                   <RiFacebookFill />
                 </Link>

@@ -9,6 +9,10 @@ import About from "./parts/HomePage/About";
 import Review from "./components/Review";
 import Destinations from "./parts/HomePage/Destinations";
 import Callback from "./components/Callback";
+import PricingPage from "./components/Pricingpage";
+import AllReviewsPage from "./pages/AllReviewsPage";
+import ContactPage from "./pages/ContactPage";
+
 
 export default function App() {
   return (
@@ -20,6 +24,9 @@ export default function App() {
           <Route exact path="Review" element={<Review />} />
           <Route exact path="Destinations" element={<Destinations />} />
           <Route exact path="Callback" element={<Callback />} />
+          <Route exact path="PricingPage" element={<PricingPage />} />
+          <Route path="allreview" element={<AllReviewsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
          
           
           <Route path="*" element={<NotFound />} />

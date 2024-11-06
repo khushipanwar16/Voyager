@@ -32,7 +32,7 @@ export default function Hero() {
              recommendations, and book everything in one place with real-time updates. Whether you're seeking adventure or relaxation,Voyager is
               your ultimate travel companion, making every journey seamless and enjoyable.
             </p>
-            <Link to="/" className="hero__button button inline-flex text-black border-2 border-black ">
+            <Link to="/Destinations" className="hero__button button inline-flex text-black border-2 border-black ">
               Get Started
             </Link>
           </div>

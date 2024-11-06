@@ -17,7 +17,7 @@ export default function About() {
            journey with personalized planning, real-time updates, and curated experiences, ensuring every adventure is 
            memorable and effortless.
           </p>
-          <Link to="/" className="about__button button inline-flex  text-black border-2 border-black">
+          <Link to="/Destinations" className="about__button button inline-flex  text-black border-2 border-black">
             Get Started
             <RiArrowRightLine className="text-[1.3rem]" />
           </Link>

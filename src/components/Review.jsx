@@ -17,7 +17,7 @@ export default function Review() {
            the unforgettable memories they've created with us. Join our community of explorers and see why Voyager is your ultimate 
            travel companion!
           </p>
-          <Link to="/review" className="review__button button inline-flex">
+          <Link to="/allreview" className="review__button button inline-flex">
             All reviews
           </Link>
         </div>
